@@ -19,6 +19,21 @@ function App() {
       .then((res) => res.text())
       .then((res) => setApiResponse(res));
   };
+  const stopInLED = () => {
+    fetch('http://localhost:9000/cylonRoute/stopInLED')
+      .then((res) => res.text())
+      .then((res) => setApiResponse(res));
+  };
+  const blinkLED = () => {
+    fetch('http://localhost:9000/cylonRoute/blinkLED')
+      .then((res) => res.text())
+      .then((res) => setApiResponse(res));
+  };
+  const changeBrightness = () => {
+    fetch('http://localhost:9000/cylonRoute/changeBrightness')
+      .then((res) => res.text())
+      .then((res) => setApiResponse(res));
+  };
   return (
     <div className='App'>
       <Button variant='primary' onClick={setLEDConfiguration}>
@@ -27,8 +42,17 @@ function App() {
       <Button variant='success' onClick={startLED}>
         Start the LED
       </Button>
-      <Button variant='danger' onClick={stopLED}>
+      <Button variant='success' onClick={stopLED}>
         Stop the LED
+      </Button>
+      <Button variant='danger' onClick={stopInLED}>
+        Stop the LED in 3 secs
+      </Button>
+      <Button variant='danger' onClick={blinkLED}>
+        Blink the LED
+      </Button>
+      <Button variant='danger' onClick={changeBrightness}>
+        Change brightness
       </Button>
       <p className='App-intro'>{apiResponse}</p>
     </div>

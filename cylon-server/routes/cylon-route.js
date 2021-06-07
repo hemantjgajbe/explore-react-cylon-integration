@@ -18,5 +18,18 @@ router.get('/stopLED', function (req, res, next) {
   LEDRobot.stopLED();
   res.send('LED Stopped');
 });
+router.get('/stopLEDIn', function (req, res, next) {
+  // Stop Led in 3 secs
+  LEDRobot.stopLEDIn;
+  res.send('LED Stops in 3 secs');
+});
+router.get('/blinkLED', function (req, res, next) {
+  LEDRobot.blinkLED;
+  res.send('Blink LED');
+});
+router.get('/changeBrightness', function (req, res, next) {
+  LEDRobot.changeBrightness();
+  res.send('Change brightness');
+});
 
 module.exports = router;
