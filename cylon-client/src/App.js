@@ -42,16 +42,16 @@ function App() {
       <Button variant='success' onClick={startLED}>
         Start the LED
       </Button>
-      <Button variant='success' onClick={stopLED}>
+      <Button variant='danger' onClick={stopLED}>
         Stop the LED
       </Button>
-      <Button variant='danger' onClick={stopInLED}>
+      <Button variant='info' onClick={stopInLED}>
         Stop the LED in 3 secs
       </Button>
-      <Button variant='danger' onClick={blinkLED}>
+      <Button variant='warning' onClick={blinkLED}>
         Blink the LED
       </Button>
-      <Button variant='danger' onClick={changeBrightness}>
+      <Button variant='dark' onClick={changeBrightness}>
         Change brightness
       </Button>
       <p className='App-intro'>{apiResponse}</p>
